@@ -1,8 +1,8 @@
 /* styles.css */
 
 :root {
-    --background-color: rgb(201, 214, 228);
-    --sidebar-bg: #C14600;
+    --background-color: rgb(248, 250, 252);
+    --sidebar-bg: rgb(75, 107, 139);
     --sidebar-text: #FEF9E1;
     --sidebar-heading-color: #FF9D23;
     /* --sidebar-content-color: #FEF9E1; */
