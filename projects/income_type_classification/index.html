@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Type Classification</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="../../index.html"><img src="../../images/temp_ava.jpg" alt="My Avatar" class="avatar"></a>
+            <h1>Income Type Classification</h1>
+        </div>
+    </header>
+    
+    <div class="content-wrapper">
+        <h2>Dataset</h2>
+        <p>The data was fetched from World Bank by using APIs. It includes economy indices such as GDP or GNI, year of record, colony, and excludes name of country. The time range is from 2012 to 2022. There are 4 income types: high, higher middle, lower middle, and low. <a href="https://drive.google.com/file/d/11xWZgK4ZhLko7d0fUDc82FHW3i1m1yBu/view?usp=sharing" target="_blank"> Link to dataset</p></a>
+
+        <h2>Cleaning and Preprocessing</h2>
+        <p>As the data was fetched through APIs, it is not necessary to clean. On the other hand, I applied Ordinal Encoding for categorical features, and standarlize for numerical features.</p>
+
+        <h2>Models and Evaluation</h2>
+        <p> There were two models that were trained: KNN and Random Forest. The data was splitted into train set and test set with ratio is 4:1</p>
+        <table border="1" width="50%">
+            <tr><th></th><th>Test</th><th>Train</th>  </tr>
+            <tr><th>KNN</th><th>0.05</th><th>0.63</th>   </tr>
+            <tr><th>Random Forest</th><th>0</th><th>0.98</th>   </tr>
+        </table>
+
+        As the table shows, models cannot predict well. The accuracy of KNN is 0.05, and Random Forest is 0. The reason may be the data is not enough, or it needs more powerful models.
+
+        <h2>Future Work</h2>
+        <p>For future work, I will try to apply more models such as SVM, Logistic Regression, or Neural Network to see if the accuracy can be improved. Also, the data will be collected for diversity.</p>
+    </div>
+
+    <footer>
+        <p>Email: dangmingphuc505@gmail.com</p>
+        <p>Phone: (+84)</p>
+        <p>Linkedin: <a href="https://www.linkedin.com/in/phuc-dm/" target="_blank">phuc-dm</a></p>
+    </footer>
+</body>
+</html>
