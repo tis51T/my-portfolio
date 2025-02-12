@@ -1,12 +1,11 @@
 :root {
-    --background-color: #FEF9E1;
-    --sidebar-bg: #C14600;
+    --background-color: rgb(248, 250, 252);
+    --sidebar-bg: rgb(2, 70, 131);
     --sidebar-text: #FEF9E1;
-    --h2-color: #FF9D23;
-    --h1-color: #FEF9E1;
-    --h3-color: #5a2c0cd8;
-    --border-color: rgba(193, 70, 0, 0.7);
-    --content-text: #5a2d0c;
+    --h2-color: rgb(44, 172, 173);
+    /*--h1-color: #FEF9E1;*/
+    --h3-color: rgb(117, 200, 202);
+    --content-text: #002b5b;
 }
 
 body {
