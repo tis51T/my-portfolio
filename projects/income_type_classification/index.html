@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Income Type Classification</title>
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -19,7 +20,7 @@
         <p>The data was fetched from World Bank by using APIs. It includes economy indices such as GDP or GNI, year of record, colony, and excludes name of country. The time range is from 2012 to 2022. There are 4 income types: high, higher middle, lower middle, and low. <a href="https://drive.google.com/file/d/11xWZgK4ZhLko7d0fUDc82FHW3i1m1yBu/view?usp=sharing" target="_blank"> Link to dataset</p></a>
 
         <h2>Cleaning and Preprocessing</h2>
-        <p>As the data was fetched through APIs, it is not necessary to clean. On the other hand, I applied Ordinal Encoding for categorical features, and standarlize for numerical features.</p>
+        <p>As the data was fetched through APIs, it have already been cleaned. On the other hand, I applied Ordinal Encoding for categorical features, and standarlize for numerical features.</p>
 
         <h2>Models and Evaluation</h2>
         <p> There were two models that were trained: KNN and Random Forest. The data was splitted into train set and test set with ratio is 4:1</p>
