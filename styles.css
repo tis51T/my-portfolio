@@ -3,7 +3,7 @@
 :root {
     --background-color: rgb(248, 250, 252);
     --sidebar-bg: rgb(2, 70, 131);
-    --sidebar-text: #FEF9E1;
+    --sidebar-text: rgb(248, 250, 252);
     --sidebar-heading-color: #75e2e0;
     /* --sidebar-content-color: #FEF9E1; */
     --h1-color: rgb(44, 172, 173);
