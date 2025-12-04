@@ -3,8 +3,11 @@ import pandas as pd
 
 def render_income_classification_dialog():
     """Render the Income Type Classification project dialog content"""
-    
-    st.header("📊 Dataset")
+
+    # Use primary color from the app theme if available
+    primary = st.session_state.get('primary', '#FFCC66')
+
+    st.markdown(f"<h2 style='color: {primary};'>📊 Dataset</h2>", unsafe_allow_html=True)
     st.write("""
     The data was fetched from World Bank by using APIs. It includes economy indices such as GDP or GNI, 
     year of record, colony, and excludes name of country. The time range is from 2012 to 2022. There are 
@@ -12,13 +15,13 @@ def render_income_classification_dialog():
     """)
     st.markdown("[📁 Link to dataset](https://drive.google.com/file/d/11xWZgK4ZhLko7d0fUDc82FHW3i1m1yBu/view?usp=sharing)")
 
-    st.header("🧹 Cleaning and Preprocessing")
+    st.markdown(f"<h2 style='color: {primary};'>🧹 Cleaning and Preprocessing</h2>", unsafe_allow_html=True)
     st.write("""
     As the data was fetched through APIs, it have already been cleaned. On the other hand, I applied 
     Ordinal Encoding for categorical features, and standardize for numerical features.
     """)
 
-    st.header("🤖 Models and Evaluation")
+    st.markdown(f"<h2 style='color: {primary};'>🤖 Models and Evaluation</h2>", unsafe_allow_html=True)
     st.write("""
     There were two models that were trained: KNN and Random Forest. The data was splitted into train 
     set and test set with ratio is 4:1
@@ -43,12 +46,12 @@ def render_income_classification_dialog():
     The reason may be the data is not enough, or it needs more powerful models.
     """)
 
-    st.header("🚀 Future Work")
+    st.markdown(f"<h2 style='color: {primary};'>🚀 Future Work</h2>", unsafe_allow_html=True)
     st.write("""
     For future work, I will try to apply more models such as SVM, Logistic Regression, or Neural Network 
     to see if the accuracy can be improved. Also, the data will be collected for diversity.
     """)
     
     if st.button("Close", key="close_income"):
-        st.session_state.show_income_class = False
+        st.session_state.open_dialog = None
         st.rerun()
