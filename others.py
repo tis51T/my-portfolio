@@ -1,7 +1,6 @@
 import streamlit as st
 
-def render_experience():
-    st.header("Experience")
+def render_others():
     st.markdown("**University of Science — Data Science Student**")
     st.write("Studying Data Science, coursework in ML, statistics, and signal processing.")
     st.markdown("**Intern — Data Engineering (Internship)**")

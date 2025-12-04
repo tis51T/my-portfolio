@@ -3,7 +3,7 @@ from PIL import Image
 import os
 from components import render_house_price_dialog, render_income_classification_dialog
 from project import render_projects
-from experience import render_experience
+from others import render_others
 from achievement import render_achievements
 
 # Page configuration
@@ -92,19 +92,18 @@ with st.sidebar:
     st.write("Email: dmphuc04.work@gmail.com")
     st.write("Phone: (+84)...")
     st.write("LinkedIn: [phuc-dm](https://www.linkedin.com/in/phuc-dm/)")
-    st.write("Facebook: [Đặng Minh Phúc](https://www.facebook.com/Tis51T/)")
 
 # Main Content
 st.title("🎯 Phuc's Portfolio")
 
 # Render each major section in tabs
-tab_projects, tab_experience, tab_achievements = st.tabs(["Projects", "Experience", "Achievements"])
+tab_experience,tab_projects,  tab_achievements = st.tabs([ "Experience","Projects", "Achievements"])
 
 with tab_projects:
     render_projects()
 
 with tab_experience:
-    render_experience()
+    render_others()
 
 with tab_achievements:
     render_achievements()
