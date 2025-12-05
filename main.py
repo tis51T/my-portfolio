@@ -1,10 +1,10 @@
 import streamlit as st
 from PIL import Image
 import os
-from components import render_house_price_dialog, render_income_classification_dialog
 from project import render_projects
 from others import render_others
 from achievement import render_achievements
+import datetime 
 
 # Page configuration
 st.set_page_config(
@@ -93,6 +93,10 @@ with st.sidebar:
     st.write("Phone: (+84)...")
     st.write("LinkedIn: [phuc-dm](https://www.linkedin.com/in/phuc-dm/)")
 
+    st.markdown("---")
+    last_update = datetime.date.today().strftime("%Y-%m-%d")
+    st.markdown("Lasted updated: June 2025")
+
 # Main Content
 st.title("🎯 Phuc's Portfolio")
 
@@ -115,20 +119,4 @@ st.markdown("""
     <p>© 2025 Phuc's Portfolio | Built with Streamlit</p>
 </div>
 """, unsafe_allow_html=True)
-
-# Dialog for House Price Prediction
-@st.dialog("House Price Prediction in Ho Chi Minh City", width="large")
-def show_house_price_dialog():
-    render_house_price_dialog()
-
-# Dialog for Income Type Classification
-@st.dialog("Income Type Classification", width="large")
-def show_income_class_dialog():
-    render_income_classification_dialog()
-
-# Show dialogs based on session state
-if st.session_state.open_dialog == 'house':
-    show_house_price_dialog()
-elif st.session_state.open_dialog == 'income':
-    show_income_class_dialog()
 

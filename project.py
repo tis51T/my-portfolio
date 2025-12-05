@@ -5,7 +5,7 @@ PROJECTS = [
         "title": "Searching Film Website",
         "description": """In the age of streaming, finding where to watch a specific movie or TV show can be a daunting task. With countless platforms available, I embarked on a project to create a web application that allows users to search for films and instantly discover which streaming services offer them. This tool aims to simplify the search process and enhance the viewing experience.""",
         "skills": "Web Scrapping, Data Cleaning, Data Preprocessing, Machine Learning",
-        "date": "November 2025",
+        "date": "May 2025",
     },
         {"title": "Sarcasm Detection",
         "description": """Sarcasm is a nuanced form of communication that often poses challenges for natural language processing (NLP) systems. To tackle this, I developed a sarcasm detection model that can accurately identify sarcastic remarks in text. This project involved collecting a diverse dataset, preprocessing the text data, and experimenting with various machine learning algorithms to achieve optimal performance.""",
@@ -55,7 +55,7 @@ def render_projects():
             if i + j < len(PROJECTS):
                 project = PROJECTS[i + j]
                 with cols[j]:
-                    with st.expander(project["title"]):
+                    with st.expander(project["title"], expanded=True):
                         st.markdown(f"""<span style='color: {st.session_state.get('primary','') or '#FFCC66'}; font-weight: 700;'>Background:</span> 
                                     {project["description"]}
                                     """, unsafe_allow_html=True)
